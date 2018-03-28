@@ -540,7 +540,7 @@ def donchian_channel(df, n):
         dc_l.append(dc)
         i += 1
 
-    donchian_chan = pd.Series(DC_l, name='Donchian_' + str(n))
+    donchian_chan = pd.Series(dc_l, name='Donchian_' + str(n))
     donchian_chan = donchian_chan.shift(n - 1)
     return df.join(donchian_chan)
 
